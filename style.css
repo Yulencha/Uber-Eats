@@ -1,0 +1,349 @@
+:root {
+  --Rpadd: 82px;
+  --Lpadd: 82px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url("fonts/roboto/Roboto.ttf");
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+  scroll-behavior: smooth;
+}
+
+.header {
+  height: 72px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 0px 16px 0px #26262629;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer {
+  background: #262626;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.right-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sing-in {
+  height: 40px;
+  width: 78px;
+  border-radius: 2px;
+  margin-right: 27px;
+  border: 1px solid #e0e0e0;
+  background: none;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.content .searchCafe {
+  border-bottom: 1px solid rgba(117, 117, 117, 0.3);
+  margin: 56px 0;
+}
+.content .searchCafe .searchText {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.content .h1 {
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1d1d1d;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.content .content-container .rest {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.content .content-container .rest-name {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 16px;
+}
+
+.content .content-container .rest-type {
+  font-size: 14px;
+  line-height: 21px;
+  color: #626262;
+  margin: 4px 0;
+}
+
+.content .content-container .rest-time {
+  font-size: 13px;
+  line-height: 21px;
+}
+.footer a {
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  pointer-events: none; /*!!!!!!!!!!!отключила ссылки*/
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-menu,
+.footer-links {
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.button-up {
+  position: fixed;
+  right: 16px;
+  bottom: 24px;
+  box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 50%), 0px 5px 10px 0px rgb(0 0 0);
+}
+.button-up:hover {
+  box-shadow: 0px 7px 10px 0px rgb(0 0 0 / 50%), 0px 5px 10px 0px rgb(0 0 0);
+}
+.button-up:active {
+  box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 50%), 0px 5px 10px 0px rgb(0 0 0);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-links .appStore-link {
+  margin-right: 41px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info a {
+  font-size: 11px;
+}
+
+.footer-menu {
+  padding-top: 32px;
+  display: flex;
+}
+
+.footer-menu .language-change {
+  display: flex;
+  align-items: center;
+}
+
+.footer-menu .language-change .world {
+  background: #3b3b3b;
+  padding: 12px 16px;
+}
+.footer-menu .language-change select {
+  background: #3b3b3b;
+  padding: 12px 0 12px 0;
+  font-size: 13px;
+  color: #ffffff;
+  border: none;
+  width: 180px;
+}
+
+.footer-menu .UberEats {
+  font-size: 16px;
+  margin: 32px 0 20px 0;
+}
+.footer-menu .UberEats::before {
+  content: "#";
+  color: #49a144;
+}
+
+.footer-menu a {
+  font-size: 13px;
+  margin-bottom: 23px;
+}
+
+/* Desktop  ----------- */
+@media only screen and (min-width: 1124px) {
+  .header,
+  .content,
+  .footer {
+    padding: 0 var(--Rpadd) 0px var(--Lpadd);
+  }
+  .footer {
+    height: 552px;
+  }
+  .basket {
+    margin-right: 17px;
+  }
+
+  .content .content-container {
+    margin-bottom: 64px;
+  }
+  .footer-logo {
+    height: 116px;
+  }
+  .footer-menu {
+    height: 220px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .footer-menu .footer-menu-2box,
+  .footer-menu .footer-menu-3box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7px;
+  }
+  .footer-menu .footer-menu-1box {
+    margin-right: 100px;
+  }
+
+  .footer-menu .footer-menu-2box {
+    margin-right: 130px;
+  }
+  .footer-links {
+    height: 120px;
+  }
+  .footer-info {
+    height: 93px;
+  }
+}
+
+/* Tablet  ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1123.9px) {
+  .header {
+    padding: 0 8px 0px 8px;
+  }
+
+  .content {
+    padding: 0 8px 0px 8px;
+  }
+
+  .footer {
+    height: 552px;
+    padding: 0 8px 0px 8px;
+  }
+  .content .content-container {
+    margin-bottom: 34px;
+  }
+
+  .footer-logo {
+    height: 116px;
+  }
+  .footer-menu {
+    height: 220px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .footer-menu .footer-menu-2box,
+  .footer-menu .footer-menu-3box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7px;
+  }
+  .footer-menu .footer-menu-1box {
+    margin-right: 80px;
+  }
+
+  .footer-menu .footer-menu-2box {
+    margin-right: 60px;
+  }
+  .footer-links {
+    height: 120px;
+  }
+  .footer-info {
+    height: 93px;
+  }
+
+  .footer-menu .language-change select {
+    width: 130px;
+  }
+}
+
+/* Mobile  ----------- */
+@media only screen and (max-width: 767.9px) {
+  .header {
+    padding: 0 8px 0px 8px;
+  }
+
+  .content {
+    padding: 0 8px 0px 8px;
+  }
+
+  .footer {
+    height: 862px;
+    padding: 0 8px 0px 8px;
+  }
+  .content .content-container {
+    margin-bottom: 34px;
+  }
+
+  .footer-logo {
+    height: 116px;
+  }
+  .footer-menu {
+    height: 492px;
+    flex-direction: column;
+  }
+
+  .footer-menu .footer-menu-2box,
+  .footer-menu .footer-menu-3box {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-links {
+    height: 84px;
+  }
+  .footer-info {
+    height: 167px;
+  }
+  .footer-links .appStore-link {
+    margin-right: 25px;
+  }
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .footer-info a {
+    margin: 12px 0;
+  }
+
+  .footer-menu .language-change select {
+    width: 130px;
+  }
+  .footer-menu .social {
+    margin-bottom: 43px;
+  }
+}
